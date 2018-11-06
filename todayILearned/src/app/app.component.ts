@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AmplifyService } from "aws-amplify-angular";
 
 @Component({
   selector: "app-root",
@@ -7,4 +8,10 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "Today I Learned";
+
+  constructor(private amplify: AmplifyService) {}
+
+  getTILs() {
+    console.log(this.amplify.api());
+  }
 }
