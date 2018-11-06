@@ -1,0 +1,7 @@
+type TIL @model {
+  id: ID!
+  title: String!
+  date: String!
+  content: String
+  tags: [String]
+}

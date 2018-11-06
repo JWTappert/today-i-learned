@@ -1,0 +1,120 @@
+type TIL {
+  id: ID!
+  title: String!
+  date: String!
+  content: String
+  tags: [String]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelTILConnection {
+  items: [TIL]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelTILFilterInput {
+  id: ModelIDFilterInput
+  title: ModelStringFilterInput
+  date: ModelStringFilterInput
+  content: ModelStringFilterInput
+  tags: ModelStringFilterInput
+  and: [ModelTILFilterInput]
+  or: [ModelTILFilterInput]
+  not: ModelTILFilterInput
+}
+
+type Query {
+  getTIL(id: ID!): TIL
+  listTILs(filter: ModelTILFilterInput, limit: Int, nextToken: String): ModelTILConnection
+}
+
+input CreateTILInput {
+  id: ID
+  title: String!
+  date: String!
+  content: String
+  tags: [String]
+}
+
+input UpdateTILInput {
+  id: ID!
+  title: String
+  date: String
+  content: String
+  tags: [String]
+}
+
+input DeleteTILInput {
+  id: ID
+}
+
+type Mutation {
+  createTIL(input: CreateTILInput!): TIL
+  updateTIL(input: UpdateTILInput!): TIL
+  deleteTIL(input: DeleteTILInput!): TIL
+}
+
+type Subscription {
+  onCreateTIL: TIL @aws_subscribe(mutations: ["createTIL"])
+  onUpdateTIL: TIL @aws_subscribe(mutations: ["updateTIL"])
+  onDeleteTIL: TIL @aws_subscribe(mutations: ["deleteTIL"])
+}

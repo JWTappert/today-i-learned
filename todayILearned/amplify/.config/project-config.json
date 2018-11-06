@@ -1,0 +1,20 @@
+{
+    "projectName": "todayILearned",
+    "projectPath": "D:\\Github\\today-i-learned\\todayILearned",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "C:\\Users\\justi\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "angular",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist/todayILearned",
+            "BuildCommand": "npm.cmd run-script build",
+            "StartCommand": "ng serve"
+        }
+    },
+    "providers": {
+        "awscloudformation": "C:\\Users\\justi\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-provider-awscloudformation"
+    }
+}
