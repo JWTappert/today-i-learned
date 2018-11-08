@@ -11,27 +11,7 @@
 			"StackId": "arn:aws:cloudformation:us-east-1:743569476153:stack/todayearned-20181105124938/50fbb280-e13c-11e8-8431-50faeaf04099"
 		}
 	},
-	"auth": {
-		"cognito64c3c88d": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/todayearned-20181105124938-deployment/amplify-cfn-templates/auth/cognito64c3c88d-cloudformation-template.yml",
-				"logicalId": "authcognito64c3c88d"
-			},
-			"lastPushTimeStamp": "2018-11-06T00:55:24.951Z",
-			"output": {
-				"AppClientSecret": "1ueuqideje6aojrvueavs4on1knsilasgctnvae5o526d9j9t7l7",
-				"UserPoolId": "us-east-1_RWqabwLyS",
-				"AppClientIDWeb": "62475soocjgccsneb83g78biv0",
-				"AppClientID": "7f8ulvfvss7i76q0t8u6s65knt",
-				"IdentityPoolId": "us-east-1:e20beb50-33ea-411e-9782-d11336b8b2d1",
-				"IdentityPoolName": "cognito64c3c88d_identitypool_64c3c88d",
-				"UserPoolName": "cognito64c3c88d_userpool_64c3c88d"
-			},
-			"lastPushDirHash": "LaGKHqBGTpe6Pgi5g4RrIxzfT2Q="
-		}
-	},
+	"auth": {},
 	"api": {
 		"tilApi": {
 			"service": "AppSync",
