@@ -7,10 +7,10 @@ import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { AuthInterceptor } from './auth/auth.interceptor.service';
-import { LoginComponent } from './login/login.component';
-import { NavComponent } from './nav/nav/nav.component';
-import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { NavComponent } from './nav/nav.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, NavComponent, HomeComponent],
